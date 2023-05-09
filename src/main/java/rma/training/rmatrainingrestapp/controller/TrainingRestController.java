@@ -17,7 +17,7 @@ import static rma.training.rmatrainingrestapp.service.AppConstants.MSG_GREETINGS
 @Slf4j
 @RestController
 public class TrainingRestController {
-
+//siiiiiiiiiiiiiiiiiiiiiii
     @RequestMapping("/")
     @ResponseBody
     public String welcome() {
