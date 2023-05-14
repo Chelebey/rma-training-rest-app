@@ -5,11 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.Map;
 import java.util.stream.Collectors;
+
 
 import static rma.training.rmatrainingrestapp.service.AppConstants.ENDPOINT_GET_TEST;
 import static rma.training.rmatrainingrestapp.service.AppConstants.MSG_GREETINGS;
@@ -18,10 +21,15 @@ import static rma.training.rmatrainingrestapp.service.AppConstants.MSG_GREETINGS
 @RestController
 public class TrainingRestController {
 //siiiiiiiiiiiiiiiiiiiiiii
-    @RequestMapping("/")
-    @ResponseBody
+    @GetMapping("/")
     public String welcome() {
-        return MSG_GREETINGS;
+        return "index";
+    }
+
+    @GetMapping("/test21")
+     public String siiFun()
+    {
+     return "yes";
     }
 
     @GetMapping(value = ENDPOINT_GET_TEST)
